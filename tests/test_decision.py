@@ -1,4 +1,4 @@
-from core.decision import HCMInput, HCMConfig, hcm_decide
+from hcm_engine.core.decision import HCMInput, HCMConfig, hcm_decide
 
 def test_allow_when_below_anomaly_threshold():
     cfg = HCMConfig(theta_a=0.5, theta_I=0.3)
