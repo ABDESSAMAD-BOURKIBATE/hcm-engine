@@ -1,1 +1,23 @@
-
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HCM Decision Output",
+  "type": "object",
+  "required": ["decision", "impact", "reason", "details"],
+  "properties": {
+    "decision": {
+      "type": "string",
+      "enum": ["ALLOW", "DEFER", "CONTAIN"]
+    },
+    "impact": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "reason": {
+      "type": "string"
+    },
+    "details": {
+      "type": "object"
+    }
+  }
+}
